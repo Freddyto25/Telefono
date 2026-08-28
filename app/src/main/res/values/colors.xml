@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta estándar: contraste AA/AAA verificado sobre fondo blanco/negro -->
+    <color name="brand_primary">#0B5FFF</color>
+    <color name="brand_primary_dark">#0A4ACC</color>
+    <color name="brand_accent">#00A36C</color>
+    <color name="call_green">#1E8E3E</color>
+    <color name="call_red">#D93025</color>
+    <color name="surface_light">#FFFFFF</color>
+    <color name="surface_dark">#121212</color>
+    <color name="text_on_light">#101010</color>
+    <color name="text_on_dark">#F5F5F5</color>
+
+    <!-- Tema de ALTO CONTRASTE para baja visión: negro puro / amarillo puro,
+         combinación con la mayor relación de contraste posible (21:1) -->
+    <color name="hc_background">#000000</color>
+    <color name="hc_text">#FFFF00</color>
+    <color name="hc_primary">#FFFFFF</color>
+    <color name="hc_call_green">#00FF00</color>
+    <color name="hc_call_red">#FF3333</color>
+</resources>

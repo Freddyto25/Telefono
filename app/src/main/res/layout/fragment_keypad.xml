@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:textSize="28sp"
+        android:gravity="center"
+        android:minHeight="56dp"
+        android:background="@android:color/transparent"
+        android:hint="@string/hint_number_field"
+        android:contentDescription="@string/desc_number_field"
+        android:importantForAutofill="no" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:stretchColumns="0,1,2">
+
+        <TableRow>
+            <Button style="@style/KeypadButton" android:id="@+id/key1" android:text="1" android:contentDescription="@string/btn_call" />
+            <Button style="@style/KeypadButton" android:id="@+id/key2" android:text="2\nABC" />
+            <Button style="@style/KeypadButton" android:id="@+id/key3" android:text="3\nDEF" />
+        </TableRow>
+        <TableRow>
+            <Button style="@style/KeypadButton" android:id="@+id/key4" android:text="4\nGHI" />
+            <Button style="@style/KeypadButton" android:id="@+id/key5" android:text="5\nJKL" />
+            <Button style="@style/KeypadButton" android:id="@+id/key6" android:text="6\nMNO" />
+        </TableRow>
+        <TableRow>
+            <Button style="@style/KeypadButton" android:id="@+id/key7" android:text="7\nPQRS" />
+            <Button style="@style/KeypadButton" android:id="@+id/key8" android:text="8\nTUV" />
+            <Button style="@style/KeypadButton" android:id="@+id/key9" android:text="9\nWXYZ" />
+        </TableRow>
+        <TableRow>
+            <Button style="@style/KeypadButton" android:id="@+id/keyStar" android:text="*" />
+            <Button style="@style/KeypadButton" android:id="@+id/key0" android:text="0\n+" />
+            <Button style="@style/KeypadButton" android:id="@+id/keyHash" android:text="#" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="12dp">
+
+        <ImageButton
+            android:id="@+id/btnAddExtension"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_add"
+            android:contentDescription="@string/desc_add_extension" />
+
+        <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_call"
+            app:backgroundTint="@color/call_green"
+            android:contentDescription="@string/desc_call_button" />
+
+        <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btnBackspace"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_backspace"
+            android:contentDescription="@string/desc_backspace" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSaveContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        android:text="@string/btn_save_contact" />
+
+</LinearLayout>
+</ScrollView>

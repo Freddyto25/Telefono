@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView android:id="@+id/textStatTotal" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:paddingVertical="4dp" />
+            <TextView android:id="@+id/textStatOutgoing" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:paddingVertical="4dp" />
+            <TextView android:id="@+id/textStatIncoming" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:paddingVertical="4dp" />
+            <TextView android:id="@+id/textStatMissed" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:paddingVertical="4dp" />
+            <TextView android:id="@+id/textStatDuration" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:paddingVertical="4dp" />
+
+            <Button
+                android:id="@+id/btnCallFromInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/action_call" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

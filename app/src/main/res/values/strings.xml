@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Teléfono Pro LZ</string>
+
+    <!-- Navegación inferior -->
+    <string name="tab_keypad">Teclado</string>
+    <string name="tab_recents">Recientes</string>
+    <string name="tab_contacts">Contactos</string>
+    <string name="menu_more_options">Más opciones</string>
+    <string name="settings_title">Ajustes</string>
+
+    <!-- Teclado -->
+    <string name="hint_number_field">Número de teléfono y extensión</string>
+    <string name="desc_number_field">Campo de número. Escribe el número y, si necesitas marcar una extensión, toca el botón Agregar extensión.</string>
+    <string name="btn_call">Llamar</string>
+    <string name="desc_call_button">Llamar al número marcado</string>
+    <string name="btn_add_extension">Agregar extensión</string>
+    <string name="desc_add_extension">Inserta un separador de extensión antes de escribir los dígitos que se marcarán automáticamente al conectarse la llamada</string>
+    <string name="btn_backspace">Borrar</string>
+    <string name="desc_backspace">Borrar el último carácter</string>
+    <string name="btn_save_contact">Guardar como contacto</string>
+    <string name="desc_key">Tecla %1$s</string>
+
+    <!-- Selector de SIM -->
+    <string name="choose_sim_title">Elegir línea para llamar</string>
+    <string name="sim_slot_label">SIM %1$d: %2$s</string>
+    <string name="cancel">Cancelar</string>
+
+    <!-- Recientes -->
+    <string name="empty_recents">Aún no hay llamadas recientes</string>
+    <string name="call_type_incoming">Llamada entrante</string>
+    <string name="call_type_outgoing">Llamada saliente</string>
+    <string name="call_type_missed">Llamada perdida</string>
+    <string name="call_type_rejected">Llamada rechazada</string>
+    <string name="desc_recent_item">%1$s. %2$s. %3$s</string>
+
+    <!-- Hoja de acciones de contacto -->
+    <string name="action_call">Llamar</string>
+    <string name="action_message">Enviar mensaje</string>
+    <string name="action_info">Ver información</string>
+
+    <!-- Info de contacto -->
+    <string name="contact_info_title">Información de contacto</string>
+    <string name="stat_total_calls">Llamadas totales: %1$d</string>
+    <string name="stat_outgoing_calls">Llamadas realizadas: %1$d</string>
+    <string name="stat_incoming_calls">Llamadas recibidas: %1$d</string>
+    <string name="stat_missed_calls">Llamadas perdidas: %1$d</string>
+    <string name="stat_total_duration">Duración total: %1$s</string>
+
+    <!-- Contactos -->
+    <string name="empty_contacts">No se encontraron contactos</string>
+    <string name="hint_search_contacts">Buscar contactos</string>
+    <string name="fab_add_contact">Agregar contacto nuevo</string>
+    <string name="add_contact_title">Nuevo contacto</string>
+    <string name="hint_contact_name">Nombre</string>
+    <string name="hint_contact_number">Número de teléfono</string>
+    <string name="btn_save">Guardar</string>
+
+    <!-- En llamada -->
+    <string name="incall_incoming_from">Llamada entrante de %1$s</string>
+    <string name="incall_outgoing_to">Llamando a %1$s</string>
+    <string name="incall_connected">Llamada en curso, %1$s</string>
+    <string name="btn_answer">Contestar</string>
+    <string name="btn_decline">Rechazar</string>
+    <string name="btn_hangup">Finalizar llamada</string>
+    <string name="btn_mute">Silenciar micrófono</string>
+    <string name="btn_speaker">Altavoz</string>
+    <string name="btn_keypad_incall">Teclado</string>
+    <string name="announcing_extension">Marcando extensión automáticamente</string>
+
+    <!-- Ajustes -->
+    <string name="pref_category_accessibility">Accesibilidad</string>
+    <string name="pref_high_contrast_title">Tema de alto contraste</string>
+    <string name="pref_high_contrast_summary">Fondo negro y texto amarillo de máximo contraste para baja visión</string>
+    <string name="pref_call_announcer_title">Anunciador de llamadas</string>
+    <string name="pref_call_announcer_summary">Anuncia por voz el nombre o número de quien llama</string>
+
+    <string name="pref_category_answer_end">Responder y finalizar</string>
+    <string name="pref_volume_answer_title">Responder con la tecla de volumen</string>
+    <string name="pref_volume_answer_summary">Sube el volumen durante una llamada entrante para contestarla</string>
+    <string name="pref_power_end_title">Finalizar llamada con la tecla de encendido</string>
+    <string name="pref_power_end_summary">Requiere el permiso especial WRITE_SECURE_SETTINGS, concedido por ADB (ver README)</string>
+    <string name="pref_answer_mode_title">Modo de respuesta</string>
+    <string name="pref_answer_mode_summary">Elige si contestas deslizando/gesto o tocando el botón</string>
+
+    <string name="pref_category_calls">Llamadas</string>
+    <string name="pref_default_dialer_title">Establecer como marcador predeterminado</string>
+    <string name="pref_default_dialer_summary">Necesario para recibir llamadas y usar todas las funciones</string>
+    <string name="pref_spam_filter_title">Filtro de llamadas spam</string>
+    <string name="pref_spam_filter_summary">Bloquea números marcados como spam y notifica a Tasker</string>
+
+    <string name="answer_mode_gesture">Gesto (deslizar)</string>
+    <string name="answer_mode_touch">Toque en el botón</string>
+
+    <string name="notif_channel_calls">Llamadas</string>
+    <string name="notif_incoming_call">Llamada entrante</string>
+</resources>

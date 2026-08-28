@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.TelefonoProLZ" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/brand_primary</item>
+        <item name="colorPrimaryDark">@color/brand_primary_dark</item>
+        <item name="colorSecondary">@color/brand_accent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <!-- Tamaño mínimo de toque accesible (48dp) aplicado globalmente -->
+        <item name="minTouchTargetSize">48dp</item>
+    </style>
+
+    <style name="Theme.TelefonoProLZ.InCall" parent="Theme.TelefonoProLZ">
+        <item name="android:windowShowWallpaper">false</item>
+    </style>
+
+    <!-- Tema de alto contraste, se aplica en tiempo de ejecución cuando el
+         usuario activa la opción "Tema de alto contraste" en Ajustes -->
+    <style name="Theme.TelefonoProLZ.HighContrast" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/hc_background</item>
+        <item name="colorPrimary">@color/hc_primary</item>
+        <item name="colorOnPrimary">@color/hc_background</item>
+        <item name="colorSurface">@color/hc_background</item>
+        <item name="colorOnSurface">@color/hc_text</item>
+        <item name="android:textColorPrimary">@color/hc_text</item>
+        <item name="android:textColorSecondary">@color/hc_text</item>
+    </style>
+
+    <style name="Theme.TelefonoProLZ.HighContrast.InCall" parent="Theme.TelefonoProLZ.HighContrast" />
+
+    <!-- Botones grandes de teclado, tamaño de fuente amplio -->
+    <style name="KeypadButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">72dp</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+</resources>

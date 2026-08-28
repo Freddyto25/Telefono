@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/textCallerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textCallerNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textCallState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp" />
+
+    <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1" />
+
+    <!-- Controles en curso: mudo, teclado, altavoz -->
+    <LinearLayout
+        android:id="@+id/rowInCallControls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageButton android:id="@+id/btnMute" android:layout_width="64dp" android:layout_height="64dp" android:layout_margin="8dp" android:src="@drawable/ic_mic" android:contentDescription="@string/btn_mute" android:background="?attr/selectableItemBackgroundBorderless" />
+        <ImageButton android:id="@+id/btnKeypadInCall" android:layout_width="64dp" android:layout_height="64dp" android:layout_margin="8dp" android:src="@drawable/ic_dialpad" android:contentDescription="@string/btn_keypad_incall" android:background="?attr/selectableItemBackgroundBorderless" />
+        <ImageButton android:id="@+id/btnSpeaker" android:layout_width="64dp" android:layout_height="64dp" android:layout_margin="8dp" android:src="@drawable/ic_speaker" android:contentDescription="@string/btn_speaker" android:background="?attr/selectableItemBackgroundBorderless" />
+    </LinearLayout>
+
+    <!-- Botones grandes de contestar/rechazar/colgar, siempre controles
+         estándar (Button) para funcionar igual con 1 o 2 toques del lector -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btnDecline"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/call_red"
+            android:text="@string/btn_decline"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnAnswer"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/call_green"
+            android:text="@string/btn_answer"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnHangup"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:visibility="gone"
+            android:backgroundTint="@color/call_red"
+            android:text="@string/btn_hangup"
+            android:textSize="18sp" />
+    </LinearLayout>
+</LinearLayout>
