@@ -1,0 +1,58 @@
+name: Compilar Teléfono Pro LZ
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar código fuente
+        uses: actions/checkout@v4
+
+      - name: Configurar JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: "temurin"
+          java-version: "17"
+
+      - name: Configurar Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Generar Gradle Wrapper
+        run: gradle wrapper --gradle-version 8.7
+
+      - name: Dar permisos de ejecución a gradlew
+        run: chmod +x ./gradlew
+
+      - name: Compilar APK de depuración
+        run: ./gradlew assembleDebug --stacktrace
+
+      - name: Subir APK de depuración
+        uses: actions/upload-artifact@v4
+        with:
+          name: TelefonoProLZ-debug
+          path: app/build/outputs/apk/debug/*.apk
+
+      - name: Compilar APK de lanzamiento
+        run: ./gradlew assembleRelease --stacktrace
+
+      - name: Generar firma y firmar el APK de lanzamiento
+        run: |
+          keytool -genkey -v -keystore firma_predeterminada.jks -keyalg RSA -keysize 2048 -validity 10000 -alias lz-alias -storepass lzpassword -keypass lzpassword -dname "CN=TelefonoProLZ, O=LZ"
+          
+          BUILD_TOOLS_VERSION=$(ls $ANDROID_HOME/build-tools | tail -1)
+          APKSIGNER=$ANDROID_HOME/build-tools/$BUILD_TOOLS_VERSION/apksigner
+          
+          $APKSIGNER sign --ks firma_predeterminada.jks --ks-pass pass:lzpassword --ks-key-alias lz-alias --key-pass pass:lzpassword app/build/outputs/apk/release/*.apk
+
+      - name: Subir APK de lanzamiento firmado
+        uses: actions/upload-artifact@v4
+        with:
+          name: TelefonoProLZ-release-firmado
+          path: app/build/outputs/apk/release/*.apk
